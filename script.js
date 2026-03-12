@@ -36,7 +36,7 @@ let rank = japan.indexOf(name)
 
 if(rank === -1){
 document.getElementById("result").innerText =
-""Name not found! Your name might be rare and special!""
+"Name not found! Your name might be rare and special!"
 return
 }
 
