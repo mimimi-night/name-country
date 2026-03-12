@@ -63,3 +63,5 @@ document.getElementById("result").innerHTML =
 '<div class="result-card">🇰🇷<br>Korea<br><b>'+ krName +'</b></div>' +
 
 '</div>'
+
+}
