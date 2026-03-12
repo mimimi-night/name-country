@@ -31,8 +31,20 @@ korea:"🇰🇷"
 function convert(){
 
 let name = document.getElementById("nameInput").value.toLowerCase()
+  
+let country = document.getElementById("country").value
 
-let rank = japan.indexOf(name)
+let rank
+
+if(country === "japan"){
+rank = japan.indexOf(name)
+}
+if(country === "usa"){
+rank = usa.indexOf(name)
+}
+if(country === "korea"){
+rank = korea.indexOf(name)
+}
 
 if(rank === -1){
 document.getElementById("result").innerText =
