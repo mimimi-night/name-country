@@ -43,7 +43,7 @@ return
 let usName = usa[rank]
 let krName = korea[rank]
   
-document.getElementById("flags").innerHTML =
+document.getElementById("flag").innerHTML =
 flags.usa + " " + flags.korea
   
 document.getElementById("result").innerHTML =
