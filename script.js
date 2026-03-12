@@ -43,10 +43,11 @@ return
 let usName = usa[rank]
 let krName = korea[rank]
   
-document.getElementById("flag").innerHTML =
-flags.usa + " " + flags.korea
-  
 document.getElementById("result").innerHTML =
-"USA name: " + usName +
-"<br>Korea name: " + krName
-}
+'<div class="result-grid">' +
+
+'<div class="result-card">🇺🇸<br>USA<br><b>'+ usName +'</b></div>' +
+
+'<div class="result-card">🇰🇷<br>Korea<br><b>'+ krName +'</b></div>' +
+
+'</div>'
