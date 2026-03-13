@@ -23,3 +23,15 @@ korea: [
 "junseo"
 ]
 }
+
+const countryNames = {
+japan: "Japan",
+usa: "USA",
+korea: "Korea"
+}
+
+const flags = {
+japan: "🇯🇵",
+usa: "🇺🇸",
+korea: "🇰🇷"
+}
