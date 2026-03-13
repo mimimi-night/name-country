@@ -57,19 +57,37 @@ document.getElementById("shareBtn").style.display="inline-block"
 
 }
 
-function shareImage(){
+function shareResult(){
 
 let target = document.getElementById("result")
 
 html2canvas(target).then(canvas => {
 
-let link = document.createElement("a")
+canvas.toBlob(async function(blob){
 
-link.download = "name-result.png"
+const file = new File([blob],"name-result.png",{type:"image/png"})
 
-link.href = canvas.toDataURL()
+const shareData = {
+files:[file],
+text:"My name in other countries",
+url:"https://mimimi-night.github.io/name-country/"
+}
 
-link.click()
+if(navigator.share){
+await navigator.share(shareData)
+}else{
+
+let twitterUrl =
+"https://twitter.com/intent/tweet?text=" +
+encodeURIComponent("My name in other countries") +
+"&url=" +
+encodeURIComponent("https://mimimi-night.github.io/name-country/")
+
+window.open(twitterUrl,"_blank")
+
+}
+
+})
 
 })
 
