@@ -63,30 +63,18 @@ function sharePage(){
 
 let cards = document.querySelectorAll(".result-card")
 
-let lines = ["My name in other countries:"]
+let lines = []
 
-cards.forEach(card => {
+cards.forEach(card=>{
 lines.push(card.innerText)
 })
 
-const shareData = {
-title:"Your name in other countries",
-text: lines.join("\n\n"),
-url:"https://mimimi-night.github.io/name-country/"
-}
-
-if(navigator.share){
-navigator.share(shareData)
-}else{
+let text = lines.join("\n\n")
 
 const twitterUrl =
 "https://twitter.com/intent/tweet?text=" +
-encodeURIComponent(shareData.text) +
-"&url=" +
-encodeURIComponent(shareData.url)
+encodeURIComponent(text)
 
 window.open(twitterUrl,"_blank")
-
-}
 
 }
