@@ -2,18 +2,18 @@ const nameData = {
 
 japan:{
 male:[
-"haruto",
-"yuto",
-"sota",
-"yuki",
-"hayato"
+{roman:"haruto", native:"陽翔"},
+{roman:"yuto", native:"悠斗"},
+{roman:"sota", native:"蒼太"},
+{roman:"yuki", native:"悠希"},
+{roman:"hayato", native:"隼人"}
 ],
 female:[
-"yui",
-"aoi",
-"rin",
-"mei",
-"yuna"
+{roman:"yui", native:"結衣"},
+{roman:"aoi", native:"葵"},
+{roman:"rin", native:"凛"},
+{roman:"mei", native:"芽依"},
+{roman:"yuna", native:"結菜"}
 ]
 },
 
@@ -36,18 +36,18 @@ female:[
 
 korea:{
 male:[
-"minjun",
-"seojun",
-"jiho",
-"yujun",
-"junseo"
+{roman:"minjun", native:"민준"},
+{roman:"seojun", native:"서준"},
+{roman:"jiho", native:"지호"},
+{roman:"yujun", native:"유준"},
+{roman:"junseo", native:"준서"}
 ],
 female:[
-"seo-yeon",
-"jiwoo",
-"ha-rin",
-"minseo",
-"yuna"
+{roman:"seo-yeon", native:"서연"},
+{roman:"jiwoo", native:"지우"},
+{roman:"ha-rin", native:"하린"},
+{roman:"minseo", native:"민서"},
+{roman:"yuna", native:"유나"}
 ]
 }
 
