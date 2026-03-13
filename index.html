@@ -73,7 +73,7 @@ font-weight:bold;
 
 .result-grid{
 display:grid;
-grid-template-columns:1fr 1fr;
+grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
 gap:20px;
 margin-top:20px;
 }
@@ -96,6 +96,13 @@ font-size:18px;
 <h1>Your name in other countries</h1>
 
 <input id="nameInput" placeholder="Enter your name">
+
+<p class="select-label">Choose your gender</p>
+
+<select id="gender">
+<option value="male">Male</option>
+<option value="female">Female</option>
+</select>
 
 <p class="select-label">Choose your country</p>
 
