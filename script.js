@@ -54,7 +54,7 @@ countryNames[key] + '<br>' +
 
 html += '</div>'
 
-document.getElementById("result").innerHTML = html
+document.getElementById("resultCards").innerHTML = html
 document.getElementById("shareBtn").style.display="inline-block"
 
 }
