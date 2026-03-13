@@ -2,7 +2,7 @@ function convert(){
 
 let name = document.getElementById("nameInput").value.trim().toLowerCase()
 let country = document.getElementById("country").value
-
+let gender = document.getElementById("gender").value  
 let list = nameData[country]
 let rank = list.indexOf(name)
 
