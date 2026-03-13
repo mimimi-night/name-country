@@ -58,7 +58,32 @@ countryNames[key] + '<br>' +
 
 html += '</div>'
 
+function sharePage(){
+
+const shareData = {
+title:"Your name in other countries",
+text:"Check what your name is in other countries!",
+url:window.location.href
+}
+
+if(navigator.share){
+navigator.share(shareData)
+}else{
+
+const twitterUrl =
+"https://twitter.com/intent/tweet?text=" +
+encodeURIComponent(shareData.text) +
+"&url=" +
+encodeURIComponent(shareData.url)
+
+window.open(twitterUrl,"_blank")
+
+}
+
+}
+
 
 document.getElementById("result").innerHTML = html
-
+document.getElementById("shareBtn").style.display="inline-block"
+  
 }
