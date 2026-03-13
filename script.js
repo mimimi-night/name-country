@@ -16,16 +16,13 @@ let country = document.getElementById("country").value
 
 let gender = document.getElementById("gender").value
 
-
 name = normalizeName(name)
-
 
 let list = nameData[country][gender]
 
 let normalizedList = list.map(n => normalizeName(n))
 
 let rank = normalizedList.indexOf(name)
-
 
 if(rank === -1){
 
@@ -36,9 +33,7 @@ return
 
 }
 
-
 let html = '<div class="result-grid">'
-
 
 for(let key in nameData){
 
@@ -55,8 +50,14 @@ countryNames[key] + '<br>' +
 
 }
 
-
 html += '</div>'
+
+document.getElementById("result").innerHTML = html
+document.getElementById("shareBtn").style.display="inline-block"
+
+}
+
+
 
 function sharePage(){
 
@@ -80,10 +81,4 @@ window.open(twitterUrl,"_blank")
 
 }
 
-}
-
-
-document.getElementById("result").innerHTML = html
-document.getElementById("shareBtn").style.display="inline-block"
-  
 }
