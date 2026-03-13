@@ -50,7 +50,9 @@ female:[
 "yuna"
 ]
 }
-  
+
+}
+
 const flags = {
 japan:"🇯🇵",
 usa:"🇺🇸",
@@ -61,5 +63,4 @@ const countryNames = {
 japan:"Japan",
 usa:"USA",
 korea:"Korea"
-}
 }
