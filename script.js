@@ -74,7 +74,7 @@ const file = new File([blob],"name-result.png",{type:"image/png"})
 
 const shareData = {
 files:[file],
-text:"My name in other countries",
+text:"My name in other countries\nmimimi-night.github.io/name-country",
 }
 
 if(navigator.share){
