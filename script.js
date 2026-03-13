@@ -39,13 +39,13 @@ for(let key in nameData){
 
 if(key === country) continue
 
-let convertedName = nameData[key][gender][rank]
-
+let converted = nameData[key][gender][rank]
 html +=
 '<div class="result-card">' +
 flags[key] + '<br>' +
 countryNames[key] + '<br>' +
-'<b>'+ convertedName +'</b>' +
+'<b>'+ converted.roman +'</b><br>' +
+'<span>'+ converted.native +'</span>' +
 '</div>'
 
 }
