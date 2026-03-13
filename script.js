@@ -61,12 +61,18 @@ document.getElementById("shareBtn").style.display="inline-block"
 
 function sharePage(){
 
-let resultText = document.getElementById("result").innerText
+let cards = document.querySelectorAll(".result-card")
+
+let lines = ["My name in other countries:"]
+
+cards.forEach(card => {
+lines.push(card.innerText)
+})
 
 const shareData = {
 title:"Your name in other countries",
-text: resultText,
-url:window.location.href
+text: lines.join("\n\n"),
+url:"https://mimimi-night.github.io/name-country/"
 }
 
 if(navigator.share){
