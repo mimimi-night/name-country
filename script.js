@@ -1,3 +1,5 @@
+let isSharing = false
+
 function normalizeName(name){
 
 return name
@@ -59,6 +61,9 @@ document.getElementById("shareBtn").style.display="inline-block"
 
 function shareResult(){
 
+if(isSharing) return
+isSharing = true
+
 let target = document.getElementById("result")
 
 html2canvas(target).then(canvas => {
@@ -74,6 +79,7 @@ text:"My name in other countries",
 
 if(navigator.share){
 await navigator.share(shareData)
+isSharing = false
 }else{
 
 let twitterUrl =
@@ -83,7 +89,7 @@ encodeURIComponent("My name in other countries") +
 encodeURIComponent("https://mimimi-night.github.io/name-country/")
 
 window.open(twitterUrl,"_blank")
-
+isSharing = false
 }
 
 })
