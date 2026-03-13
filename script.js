@@ -1,50 +1,10 @@
-const japan = [
-"haruto",
-"yuto",
-"sota",
-"yuki",
-"hayato"
-]
-
-const usa = [
-"liam",
-"noah",
-"oliver",
-"elijah",
-"james"
-]
-
-const korea = [
-"minjun",
-"seojun",
-"jiho",
-"yujun",
-"junseo"
-]
-
-const flags = {
-japan:"🇯🇵",
-usa:"🇺🇸",
-korea:"🇰🇷"
-}
-
 function convert(){
 
-let name = document.getElementById("nameInput").value.toLowerCase()
-  
+let name = document.getElementById("nameInput").value.trim().toLowerCase()
 let country = document.getElementById("country").value
 
-let rank
-
-if(country === "japan"){
-rank = japan.indexOf(name)
-}
-if(country === "usa"){
-rank = usa.indexOf(name)
-}
-if(country === "korea"){
-rank = korea.indexOf(name)
-}
+let list = nameData[country]
+let rank = list.indexOf(name)
 
 if(rank === -1){
 document.getElementById("result").innerText =
@@ -52,16 +12,28 @@ document.getElementById("result").innerText =
 return
 }
 
-let usName = usa[rank]
-let krName = korea[rank]
-  
-document.getElementById("result").innerHTML =
-'<div class="result-grid">' +
+let html = '<div class="result-grid">'
 
-'<div class="result-card">🇺🇸<br>USA<br><b>'+ usName +'</b></div>' +
+for(let key in nameData){
 
-'<div class="result-card">🇰🇷<br>Korea<br><b>'+ krName +'</b></div>' +
+if(key === country){
+continue
+}
 
+let convertedName = nameData[key][rank]
+
+if(convertedName){
+html +=
+'<div class="result-card">' +
+flags[key] + '<br>' +
+countryNames[key] + '<br>' +
+'<b>' + convertedName + '</b>' +
 '</div>'
+}
 
+}
+
+html += '</div>'
+
+document.getElementById("result").innerHTML = html
 }
