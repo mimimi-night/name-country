@@ -61,9 +61,11 @@ document.getElementById("shareBtn").style.display="inline-block"
 
 function sharePage(){
 
+let resultText = document.getElementById("result").innerText
+
 const shareData = {
 title:"Your name in other countries",
-text:"Check what your name is in other countries!",
+text: resultText,
 url:window.location.href
 }
 
