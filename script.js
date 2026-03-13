@@ -57,24 +57,20 @@ document.getElementById("shareBtn").style.display="inline-block"
 
 }
 
+function shareImage(){
 
+let target = document.getElementById("result")
 
-function sharePage(){
+html2canvas(target).then(canvas => {
 
-let cards = document.querySelectorAll(".result-card")
+let link = document.createElement("a")
 
-let lines = []
+link.download = "name-result.png"
 
-cards.forEach(card=>{
-lines.push(card.innerText)
+link.href = canvas.toDataURL()
+
+link.click()
+
 })
-
-let text = lines.join("\n\n")
-
-const twitterUrl =
-"https://twitter.com/intent/tweet?text=" +
-encodeURIComponent(text)
-
-window.open(twitterUrl,"_blank")
 
 }
