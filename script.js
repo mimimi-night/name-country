@@ -66,8 +66,9 @@ isSharing = true
 
 let target = document.getElementById("result")
 
+document.querySelector(".share-title").style.display="block"
 document.querySelector(".share-url").style.display="block"
-
+  
 html2canvas(target).then(canvas => {
 
 canvas.toBlob(async function(blob){
