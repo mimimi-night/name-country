@@ -66,6 +66,8 @@ isSharing = true
 
 let target = document.getElementById("result")
 
+document.querySelector(".share-url").style.display="block"
+
 html2canvas(target).then(canvas => {
 
 canvas.toBlob(async function(blob){
@@ -79,7 +81,6 @@ text:"My name in other countries",
 
 if(navigator.share){
 await navigator.share(shareData)
-isSharing = false
 }else{
 
 let twitterUrl =
@@ -89,8 +90,11 @@ encodeURIComponent("My name in other countries") +
 encodeURIComponent("https://mimimi-night.github.io/name-country/")
 
 window.open(twitterUrl,"_blank")
-isSharing = false
+
 }
+
+isSharing = false
+document.querySelector(".share-url").style.display="none"
 
 })
 
