@@ -42,12 +42,14 @@ for(let key in nameData){
 if(key === country) continue
 
 let converted = nameData[key][gender][rank]
+let romanName = converted.roman !== undefined ? converted.roman : converted
+let nativeName = converted.native !== undefined ? converted.native : converted
 html +=
 '<div class="result-card">' +
 flags[key] + '<br>' +
 countryNames[key] + '<br>' +
-'<b>'+ converted.roman +'</b><br>' +
-'<span>'+ converted.native +'</span>' +
+'<b>'+ romanName +'</b><br>' +
+'<span>'+ nativeName +'</span>' +
 '</div>'
 
 }
