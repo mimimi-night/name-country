@@ -22,7 +22,7 @@ name = normalizeName(name)
 
 let list = nameData[country][gender]
 
-let normalizedList = list.map(n => normalizeName(n.roman))
+let normalizedList = list.map(n => normalizeName(n.roman !== undefined ? n.roman : n))
   
 let rank = normalizedList.indexOf(name)
 
