@@ -623,6 +623,7 @@ female:[
 {roman:"Narin", native:"나린"}
 
 ],
+},
 
 france:{
 male:[
