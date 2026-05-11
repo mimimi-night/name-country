@@ -49,7 +49,7 @@ html +=
 flags[key] + '<br>' +
 countryNames[key] + '<br>' +
 '<b>'+ romanName +'</b><br>' +
-'<span>'+ nativeName +'</span>' +
+(romanName !== nativeName ? '<span>'+ nativeName +'</span>' : '') +
 '</div>'
 
 }
