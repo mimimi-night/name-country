@@ -622,7 +622,7 @@ female:[
 {roman:"Yewon", native:"예원"},
 {roman:"Narin", native:"나린"}
 
-]
+],
 
 france:{
 male:[
