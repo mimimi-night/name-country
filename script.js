@@ -22,8 +22,8 @@ name = normalizeName(name)
 
 let list = nameData[country][gender]
 
-let normalizedList = list.map(n => normalizeName(n))
-
+let normalizedList = list.map(n => normalizeName(n.roman))
+  
 let rank = normalizedList.indexOf(name)
 
 if(rank === -1){
