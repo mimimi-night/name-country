@@ -2,6 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Name in other countries?</title>
 <style>
 #flag{
@@ -31,6 +32,8 @@ border-radius:20px;
 box-shadow:0 20px 40px rgba(0,0,0,0.2);
 text-align:center;
 width:420px;
+max-width:calc(100vw - 32px);
+box-sizing:border-box;
 }
 h1{
 margin-bottom:30px;
@@ -54,6 +57,11 @@ transition:0.2s;
 }
 button:hover{
 background:#5563d1;
+}
+#message{
+margin-top:25px;
+font-size:18px;
+font-weight:bold;
 }
 #result{
 margin-top:25px;
@@ -103,6 +111,7 @@ color:#555;
 <option value="usa">USA</option>
 </select>
 <button onclick="convert()">Convert</button>
+<div id="message"></div>
 <div id="result">
 <div class="share-title" style="display:none;">
 My name in other countries
@@ -112,7 +121,7 @@ My name in other countries
 mimimi-night.github.io/name-country
 </div>
 </div>
-<button onclick="shareResult()" id="shareBtn">Share</button>
+<button onclick="shareResult()" id="shareBtn" style="display:none;">Share</button>
 </div>
 <script src="names.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
